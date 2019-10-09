@@ -1,0 +1,18 @@
+{% extends 'templates/base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% for item in pets %}
+            <div class="col-lg-3">
+                <div class="card" style="width: 18rem;margin:30px;padding:10px;">
+                    <img src="{{ item.photo }}" class="card-img-top" height="150px" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{ item.name }}</b></h5>
+                        <h6>@by {{ item.nickname }}</h6>
+                        <h6 class="card-title">Votos : {{ item.votes }}</h6>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
